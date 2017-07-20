@@ -1,4 +1,3 @@
-
 lambda { |stdout,stderr,status|
   output = stdout + stderr
   return :red   if /=== FAILURES ===/.match(output)
