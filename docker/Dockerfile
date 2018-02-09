@@ -1,4 +1,4 @@
-FROM  cyberdojofoundation/python:3.6.4
+FROM  cyberdojofoundation/python
 LABEL maintainer=jon@jaggersoft.com
 
 RUN pip3 install --upgrade pytest
