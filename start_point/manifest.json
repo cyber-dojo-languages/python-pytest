@@ -5,6 +5,11 @@
     "cyber-dojo.sh"
   ],
 
+  "hidden_filenames": [
+    "\\.pytest_cache/v/cache/lastfailed",
+    "\\.pytest_cache/v/cache/nodeids"
+  ],
+
   "filename_extension": ".py",
 
   "tab_size": 4,
