@@ -1,1 +1,1 @@
-pytest *test*.py
+pytest --cov-report term-missing --cov=. *test*.py
