@@ -16,7 +16,5 @@
 
   "display_name": "Python, pytest",
 
-  "image_name": "cyberdojofoundation/python_pytest",
-
-  "runner_choice": "stateless"
+  "image_name": "cyberdojofoundation/python_pytest"
 }
