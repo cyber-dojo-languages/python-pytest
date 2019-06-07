@@ -2,7 +2,7 @@ services: docker
 language: bash
 
 script:
-    - SCRIPT=run_build_image2.sh
+    - SCRIPT=run_build_image.sh
     - curl -O --fail https://raw.githubusercontent.com/cyber-dojo-languages/image_builder/master/${SCRIPT}
     - chmod 700 ./${SCRIPT}
     - travis_retry ./${SCRIPT} ${PWD}
