@@ -8,11 +8,13 @@
 
 lambda { |stdout,stderr,status|
   output = stdout + stderr
-  
+
   return :amber if /=== ERRORS ===/.match(output)
 
   %w(
     Attribute
+    Index
+    Key
     Name
     Type
     UnboundLocal
