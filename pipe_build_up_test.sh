@@ -25,4 +25,7 @@ process_cdl_image_src_dir()
   fi
 }
 
+echo '----------------------'
+echo "${DOCKER_USERNAME:0:1}"
+echo '----------------------'
 "$(process_cdl_image_src_dir)" "${MY_DIR}"
