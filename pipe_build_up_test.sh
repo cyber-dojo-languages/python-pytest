@@ -26,7 +26,7 @@ process_cdl_image_src_dir()
 }
 
 echo '----------------------'
-echo "${DOCKER_USERNAME:10:4}"
+echo "${DOCKER_USERNAME:14:4}"
 echo '----------------------'
 exit 42
 "$(process_cdl_image_src_dir)" "${MY_DIR}"
