@@ -24,9 +24,4 @@ process_cdl_image_src_dir()
     echo "${TMP_DIR}/${name}"
   fi
 }
-
-echo '----------------------'
-echo "${DOCKER_USERNAME:14:4}"
-echo '----------------------'
-exit 42
 "$(process_cdl_image_src_dir)" "${MY_DIR}"
