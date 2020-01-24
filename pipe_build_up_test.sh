@@ -24,4 +24,5 @@ process_cdl_image_src_dir()
     echo "${TMP_DIR}/${name}"
   fi
 }
+
 "$(process_cdl_image_src_dir)" "${MY_DIR}"
