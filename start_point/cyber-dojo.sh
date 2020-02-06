@@ -4,8 +4,8 @@ REPORT_DIR=${CYBER_DOJO_SANDBOX}/report
 rm -rf ${REPORT_DIR} || true
 mkdir -p report
 
-coverage3 \
-  run --source='.' \
+coverage3 run \
+  --source='.' \
   --module pytest \
     *test*.py
 
