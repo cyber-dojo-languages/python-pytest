@@ -1,7 +1,13 @@
-coverage3 run --source='.' -m pytest *test*.py
+set -e
 
 REPORT_DIR=${CYBER_DOJO_SANDBOX}/report
-mkdir -p ${REPORT_DIR}
+rm -rf ${REPORT_DIR} || true
+mkdir -p report
+
+coverage3 \
+  run --source='.' \
+  --module pytest \
+    *test*.py
 
 # https://coverage.readthedocs.io/en/v4.5.x/index.html
 
