@@ -5,7 +5,7 @@ rm -rf ${REPORT_DIR} || true
 mkdir -p report
 
 coverage3 run \
-  --source='.' \
+  --source=${CYBER_DOJO_SANDBOX} \
   --module pytest \
     *test*.py
 
