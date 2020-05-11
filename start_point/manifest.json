@@ -1,20 +1,18 @@
 {
-  "visible_filenames": [
+  "display_name": "Python, pytest",
+  "image_name": "cyberdojofoundation/python_pytest",
+  "visible_filenames":
+  [
     "test_hiker.py",
     "hiker.py",
     "cyber-dojo.sh"
   ],
-
-  "hidden_filenames": [
+  "filename_extension": [ ".py" ],
+  "max_seconds": 10,
+  "tab_size": 4,
+  "hidden_filenames":
+  [
     "\\.pytest_cache/.*",
     "\\.coverage"
-  ],
-
-  "filename_extension": ".py",
-
-  "tab_size": 4,
-
-  "display_name": "Python, pytest",
-
-  "image_name": "cyberdojofoundation/python_pytest"
+  ]
 }
