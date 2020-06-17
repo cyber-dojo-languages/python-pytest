@@ -17,7 +17,9 @@ function cyber_dojo_exit()
 }
 cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
+
 # --------------------------------------------------------------
+export PYTEST_ADDOPTS="-v"
 
 coverage3 run \
   --source=${CYBER_DOJO_SANDBOX} \
