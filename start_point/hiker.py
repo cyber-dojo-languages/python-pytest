@@ -3,8 +3,7 @@
 They show examples of writing and testing
   o) a global function
   o) an instance method
-Pick the style most suitable to your exercise
-and rename appropriately.
+Pick the style most suitable to your exercise.
 '''
 
 def global_answer():
