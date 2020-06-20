@@ -1,10 +1,10 @@
 '''The starting files are unrelated to the exercise.
 
-They are simply examples of writing and testing
+They show examples of writing and testing
   o) a global function
   o) an instance method
-Pick the style that best fits the exercise.
-Then delete the other one, along with this comment!
+Pick the style most suitable to your exercise
+and rename appropriately.
 '''
 
 def global_answer():
