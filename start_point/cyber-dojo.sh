@@ -19,6 +19,8 @@ cyber_dojo_enter
 trap cyber_dojo_exit EXIT SIGTERM
 
 # --------------------------------------------------------------
+# Print a short summary of each test to stdout.
+# Can produde a lot of output on parameterized tests.
 export PYTEST_ADDOPTS="-v"
 
 coverage3 run \

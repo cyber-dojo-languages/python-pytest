@@ -1,7 +1,7 @@
-import hiker
+from hiker import global_answer, Hiker
 
+def test_global_method():
+    assert global_answer() == 42
 
-def test_life_the_universe_and_everything():
-    '''a simple example to start you off'''
-    douglas = hiker.Hiker()
-    assert douglas.answer() == 42
+def test_instance_method():
+    assert Hiker().instance_answer() == 42
