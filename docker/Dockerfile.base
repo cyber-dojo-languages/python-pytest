@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/python:8dd40e1
+FROM cyberdojofoundation/python:0eb54d7
 LABEL maintainer=jon@jaggersoft.com
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
