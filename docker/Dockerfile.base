@@ -1,4 +1,4 @@
-FROM ghcr.io/cyber-dojo-languages/python:4d1f481
+FROM ghcr.io/cyber-dojo-languages/python:6abeca8
 LABEL maintainer=jon@jaggersoft.com
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
