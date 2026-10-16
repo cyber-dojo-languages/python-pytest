@@ -1,8 +1,18 @@
-FROM ghcr.io/cyber-dojo-languages/python:af23e02
+FROM ghcr.io/cyber-dojo-languages/python:5f93259
 LABEL maintainer=jon@jaggersoft.com
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip3 install --upgrade pytest pytest-cov pytest-mock pytest-random-order
+
+# pytest rewrites the asserts in each plugin it loads, and saves the result
+# beside the plugin's source. A kata runs as the sandbox user, who cannot
+# write there, so every test-run rewrote all three plugins again, about 20ms
+# of it. One run here, as root, saves them where every test-run then finds
+# them.
+RUN mkdir /tmp/rewrite \
+  && printf 'def test_rewrite():\n    assert 6 * 7 == 42\n' > /tmp/rewrite/test_rewrite.py \
+  && python3 -m pytest -q -p no:cacheprovider /tmp/rewrite \
+  && rm -rf /tmp/rewrite
 
 # A kata's test-run reads a mypy cache warmed here instead of reanalysing
 # typeshed's standard-library stubs in every fresh container. cyber-dojo.sh
@@ -10,3 +20,6 @@ RUN pip3 install --upgrade pytest pytest-cov pytest-mock pytest-random-order
 # sandbox, which is empty at the start of every run.
 COPY warm_mypy_cache.sh .
 RUN bash ./warm_mypy_cache.sh && rm ./warm_mypy_cache.sh
+
+COPY install.sh .
+RUN ./install.sh && rm ./install.sh
